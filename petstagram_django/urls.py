@@ -5,4 +5,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('petstagram_django.common.urls')),
+    path('pets/', include('petstagram_django.pets.urls')),
 ]

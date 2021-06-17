@@ -19,7 +19,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <a class="nav-link" href="#">Home</a>
+                <li><a class="nav-link" href="#">Home</a></li>
+                <li><a class="nav-link" href="{% url 'list pets' %}">All Pets</a></li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Login</a>
                 </li>
@@ -32,16 +33,18 @@
     <div class="container">
         <h1 class='text-center'>All pet photos</h1>
         <div class="row">
+            {% for pet in pets %}
             <div class="col-lg-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="pet_url" class="card-img-top" alt="...">
+                    <img src="{{ pet.image_url }}" class="card-img-top" alt="{{ pet.description }}">
                     <div class="card-body">
-                        <h5 class="card-title">pet_type pet_name, Age: pet_age</h5>
-                        <p class="card-text">pet_description</p>
-                        <a href="pet-detail with pet_id" class="btn btn-primary">See details</a>
+                        <h5 class="card-title">{{ pet.type }} {{ pet.name }}, Age: {{ pet.age }}</h5>
+                        <p class="card-text">{{ pet.description }}</p>
+                        <a href="{% url 'pet details' pet.id %}" class="btn btn-primary">See details</a>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </body>

@@ -41,6 +41,10 @@
                     <h5><u>Age:</u> {{ pet.age }}</h5>
                 </div>
                 <p class="mt-2">Description: {{ pet.description }}</p>
+                <div>
+                    <a href="url to the edit view" class="btn btn-success">Edit</a>
+                    <a href="url to the delete view" class="btn btn-danger">Delete</a>
+                </div>
 				<a href="{% url 'list pets' pet.id %}"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                 <p class="mt-2">Likes: {{ pet.likes_count }}</p>
             </div>

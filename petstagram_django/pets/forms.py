@@ -22,11 +22,11 @@ class PetForm(forms.ModelForm):
             'type': 'number'
         }
     ))
-    image_url = forms.URLField(required=True, widget=forms.TextInput(
-        attrs={
-            'class': 'form-control'
-        }
-    ))
+    # image_url = forms.URLField(required=True, widget=forms.TextInput(
+    #     attrs={
+    #         'class': 'form-control'
+    #     }
+    # ))
     description = forms.CharField(required=True, widget=forms.Textarea(attrs={
         'class': 'form-control rounded-2'
     }))

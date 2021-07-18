@@ -27,7 +27,10 @@ class Pets(models.Model):
         # ]
     )
     description = models.TextField()
-    image_url = models.URLField()
+
+    image = models.ImageField(
+        upload_to='pets',
+    )
 
 
 class Like(models.Model):

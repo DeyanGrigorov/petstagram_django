@@ -42,7 +42,7 @@ def like_pet(request, pk):
 
 def create_pets(request):
     if request.method == 'POST':
-        form = PetForm(request.POST)
+        form = PetForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('list pets')

@@ -71,7 +71,7 @@ def pet_comment(request, pk):
 def edit_pets(request, pk):
     pet = Pets.objects.get(pk=pk)
     if request.method == 'POST':
-        form = EditPetForm(request.POST, instance=pet)
+        form = EditPetForm(request.POST, request.FILES, instance=pet)
         if form.is_valid():
             form.save()
             return redirect('list pets')

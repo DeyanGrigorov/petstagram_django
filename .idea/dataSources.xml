@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="petstagram@localhost" uuid="a1e8e657-2ff5-4a59-a8ce-67bd1b73bbed">
+    <data-source source="LOCAL" name="petstagram" uuid="1d26905b-70f6-4231-9cd2-5e590bd53c62">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/petstagram_django/settings.py</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/petstagram</jdbc-url>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/petstagram</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

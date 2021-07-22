@@ -8,4 +8,5 @@ urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('', include('petstagram_django.common.urls')),
                   path('pets/', include('petstagram_django.pets.urls')),
+                  path('accounts/', include('petstagram_django.accounts.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

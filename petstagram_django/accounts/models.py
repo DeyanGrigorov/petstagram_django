@@ -15,6 +15,10 @@ class PetstagramUser(AbstractBaseUser, PermissionsMixin):
         default=False,
     )
 
+    date_created = models.DateTimeField(
+        auto_now_add=True,
+    )
+
     USERNAME_FIELD = 'email'
 
     objects = PetstagramUserManager()
